@@ -285,7 +285,7 @@ define Device/mikrotik_wap-60g
 	$(call Device/MikrotikNOR)
 	DEVICE_DTS := qcom-ipq4019-wap-60g
 	DEVICE_TITLE := MikroTik wAP 60G/wAP 60Gx3
-	DEVICE_PACKAGES += -kmod-ath10k-ct -ath10k-firmware-qca4019-ct kmod-wil6210 rssileds iperf3 wpad
+	DEVICE_PACKAGES += -kmod-ath10k-ct -ath10k-firmware-qca4019-ct kmod-wil6210 rssileds iperf3 tcpdump
 endef
 TARGET_DEVICES += mikrotik_wap-60g
 
