@@ -277,9 +277,17 @@ define Device/mikrotik_lhgg-60ad
 	$(call Device/MikrotikNOR)
 	DEVICE_DTS := qcom-ipq4019-lhgg-60ad
 	DEVICE_TITLE := MikroTik Wireless Wire Dish LHGG-60ad
-	DEVICE_PACKAGES += -kmod-ath10k-ct -ath10k-firmware-qca4019-ct kmod-wil6210 rssileds iperf3 wpad
+	DEVICE_PACKAGES += -kmod-ath10k-ct -ath10k-firmware-qca4019-ct kmod-wil6210 rssileds
 endef
 TARGET_DEVICES += mikrotik_lhgg-60ad
+
+define Device/mikrotik_wap-60g
+	$(call Device/MikrotikNOR)
+	DEVICE_DTS := qcom-ipq4019-wap-60g
+	DEVICE_TITLE := MikroTik wAP 60G/wAP 60Gx3
+	DEVICE_PACKAGES += -kmod-ath10k-ct -ath10k-firmware-qca4019-ct kmod-wil6210 rssileds iperf3 wpad
+endef
+TARGET_DEVICES += mikrotik_wap-60g
 
 define Device/netgear_ex61x0v2
 	$(call Device/DniImage)
