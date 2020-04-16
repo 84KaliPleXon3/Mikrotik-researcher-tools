@@ -23,8 +23,17 @@ Features:
     ./scripts/feeds update -a
     ./scripts/feeds install -a
     ```
+3. Configure the system:
+    
+    ```
+    make menuconfig
+    ```
 
-3. Build the system
+    When asked choose:
+    * In Target system, select Qualcomm Atheros IPQ40XX
+    * In Target Profile, select MikroTik wAP 60G/wAP 60Gx3
+
+4. Build the system
     ```bash
     # Single core
     make
@@ -32,9 +41,6 @@ Features:
     #Or for multicore
     make -j 8
     ```
-4. When the configuration asks:
-    * In Target system, select Qualcomm Atheros IPQ40XX
-    * In Target Profile, select MikroTik Wireless Wire Dish LHGG-60ad
 
 5. The image will have 2 files:
 
